@@ -68,26 +68,37 @@ Second, we investigate out-of-distribution (OOD) detection capabilities by compa
 
 <details>
 <summary>Let's hack it : adversarial attacks</summary>
-- FGSM : 
+FGSM - Single-step attack that computes perturbations using the sign of the gradient with respect to the loss function.
+> **Explaining and Harnessing Adversarial Examples**  
+> I.J. Goodfellow et al., ICLR 2015, [arXiv:1412.6572](https://arxiv.org/abs/1412.6572)
+
 <div align="center">
 <img src="proj4/output_adv/fgsm/fgsm_attack.png" alt="FGSM Attack" width="300"/>
 <img src="proj4/output_adv/fgsm/fgsm_diff.png" alt="One-Pixel Attack" width="420"/>
 <p><em>Left: FGSM distributed perturbations | Right: FGSM difference patterns</em></p>
 </div>
 
-- PGD : 
+
+
+PGD - Multi-step iterative attack that applies FGSM repeatedly while projecting perturbations back into the allowed epsilon ball.
+> **Towards Deep Learning Models Resistant to Adversarial Attacks**  
+> A. Madry et al., ICLR 2018, [arXiv:1706.06083](https://arxiv.org/abs/1706.06083)
 <div align="center">
 <img src="proj4/output_adv/pgd/pgd_attack.png" alt="FGSM Attack" width="300"/>
 <img src="proj4/output_adv/pgd/pgd_diff.png" alt="One-Pixel Attack" width="420"/>
 <p><em>Left: PGD distributed perturbations | Right: PGD difference patterns</em></p>
 </div>
-- Few-Pixel attack  : 
+Few-Pixel attack - Sparse attack that targets only the most influential pixels based on gradient magnitude, minimizing the number of modified pixels. 
+> **One Pixel Attack for Fooling Deep Neural Networks**  
+> J. Su et al., IEEE TEC 2019, [arXiv:1710.08864](https://arxiv.org/abs/1710.08864)
 <div align="center">
 <img src="proj4/output_adv/one_pixel/one_pixel_attack.png" alt="FGSM Attack" width="300"/>
 <img src="proj4/output_adv/one_pixel/one_pixel_diff.png" alt="One-Pixel Attack" width="420"/>
 <p><em>Left: Few_pixel distributed perturbations | Right: Few-pixwl difference patterns</em></p>
 </div>
-- Genetic attack  : 
+Genetic attack - Evolutionary algorithm approach that optimizes adversarial perturbations through selection, crossover, and mutation operations.
+> **Generating Natural Language Adversarial Examples**  
+> M. Alzantot et al., EMNLP 2018, [arXiv:1804.07998](https://arxiv.org/abs/1804.07998)
 <div align="center">
 <img src="proj4/output_adv/genetic/genetic_attack.png" alt="FGSM Attack" width="300"/>
 <img src="proj4/output_adv/genetic/genetic_diff.png" alt="One-Pixel Attack" width="420"/>
