@@ -71,26 +71,26 @@ Second, we investigate out-of-distribution (OOD) detection capabilities by compa
 - FGSM : 
 <div align="center">
 <img src="proj4/output_adv/fgsm/fgsm_attack.png" alt="FGSM Attack" width="300"/>
-<img src="proj4/output_adv/fgsm/fgsm_diff.png" alt="One-Pixel Attack" width="450"/>
+<img src="proj4/output_adv/fgsm/fgsm_diff.png" alt="One-Pixel Attack" width="420"/>
 <p><em>Left: FGSM distributed perturbations | Right: FGSM difference patterns</em></p>
 </div>
 
 - PGD : 
 <div align="center">
 <img src="proj4/output_adv/pgd/pgd_attack.png" alt="FGSM Attack" width="300"/>
-<img src="proj4/output_adv/pgd/pgd_diff.png" alt="One-Pixel Attack" width="450"/>
+<img src="proj4/output_adv/pgd/pgd_diff.png" alt="One-Pixel Attack" width="420"/>
 <p><em>Left: PGD distributed perturbations | Right: PGD difference patterns</em></p>
 </div>
 - Few-Pixel attack  : 
 <div align="center">
 <img src="proj4/output_adv/one_pixel/one_pixel_attack.png" alt="FGSM Attack" width="300"/>
-<img src="proj4/output_adv/one_pixel/one_pixel_diff.png" alt="One-Pixel Attack" width="450"/>
+<img src="proj4/output_adv/one_pixel/one_pixel_diff.png" alt="One-Pixel Attack" width="420"/>
 <p><em>Left: Few_pixel distributed perturbations | Right: Few-pixwl difference patterns</em></p>
 </div>
 - Genetic attack  : 
 <div align="center">
 <img src="proj4/output_adv/genetic/genetic_attack.png" alt="FGSM Attack" width="300"/>
-<img src="proj4/output_adv/genetic/genetic_diff.png" alt="One-Pixel Attack" width="450"/>
+<img src="proj4/output_adv/genetic/genetic_diff.png" alt="One-Pixel Attack" width="420"/>
 <p><em>Left: Genetic distributed perturbations | Right: Genetic difference patterns</em></p>
 </div>
 
