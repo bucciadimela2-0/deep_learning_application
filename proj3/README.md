@@ -36,6 +36,7 @@ The exercises are designed to explore different NLP tasks and modeling strategie
 
 <details>
 <summary>📂 Project Structure</summary>
+
   ```
 proj3/
 │── utils/                 # Utility scripts
