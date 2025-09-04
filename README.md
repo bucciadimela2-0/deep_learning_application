@@ -6,7 +6,7 @@ Laboratory repository for the Deep Learning Applications course, featuring hands
 Prerequisites:
   
 ```
-  pip install -r requirements.txt
+  pip install -r proj1/requirements.txt
 ```
 Let's run gradcam :
 
