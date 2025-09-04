@@ -29,7 +29,7 @@ The right plot illustrates the impact of different regularization strategies. Th
 <img src="plots/skipotnottoskip_loss.png"  width="250"/>
 <p><em>Learning curves</em></p>
 </div>
-
+<div align="center">
 | Architecture | Size | Depth | Final Accuracy | 
 |--------------|------|-------|----------------|
 | CNN | Small | [2,2] | 68% |
@@ -38,6 +38,7 @@ The right plot illustrates the impact of different regularization strategies. Th
 | CNN + skip | Small | [2,2] | 63% | 
 | CNN + skip | Medium | [5,5] | 79% | 
 | CNN + skip | Large | [7,7] | **82%** | 
+</div>
 
 These results confirm the fundamental insight from ResNet - that skip connections solve the degradation problem by allowing gradients to flow directly through identity mappings, enabling effective training of very deep networks.
 </details>
