@@ -1,6 +1,6 @@
 A deep learning project implementing CNN and MLP models, with tools for Grad-CAM visualization, training management, and evaluation under degradation or adversarial conditions.
 <details>
-<summary>🎯 Objectives<\summary>
+<summary>🎯 Objectives</summary>
 The exercises are designed to explore the behavior of different neural network architectures and techniques, focusing on training dynamics, regularization, and model interpretability.
 
 - *MLP (Multi-Layer Perceptron)**
@@ -20,10 +20,10 @@ The exercises are designed to explore the behavior of different neural network a
   - Generate **standard Grad-CAM visualizations**
   - Assess robustness under **FGSM adversarial attacks**
     - Notable examples on digits **4, 1, and 7**
-<\details>
+</details>
 > **Note:** All experiments are explained in detail in the main `README.md` located in the root of the repository.
 <details>
-<summary>📂 Project Structure<\summary>
+<summary>📂 Project Structure</summary>
   
 ```
 proj1/
@@ -55,4 +55,4 @@ proj1/
 │── resume.txt            # Notes or previous experiment logs
 ```
 
-<\details>
+</details>
