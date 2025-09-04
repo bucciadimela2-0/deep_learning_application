@@ -118,7 +118,8 @@ These results reveal that neural networks are vulnerable to various types of car
 <div align="center">
 <img src="proj4/output_ood/scores_CNN_CLASSIC.png" alt="FGSM Attack" width="200"/>
 <img src="proj4/output_ood/ROC_curve_CNN_CLASSIC.png" alt="One-Pixel Attack" width="200"/>
-
+</div>  
+<div align="center">
 <img src="proj4/output_ood/scores_AUTOENCODER.png" alt="FGSM Attack" width="200"/>
 <img src="proj4/output_ood/ROC_curve_AUTOENCODER.png" alt="One-Pixel Attack" width="200"/>
 <p><em>Left: Cnn and Autoencoder scores | Right: Cnn and Autoencoder ROC curve </em></p>
