@@ -114,7 +114,8 @@ These results reveal that neural networks are vulnerable to various types of car
 <details>
 <summary>Out of distribution</summary>
 <details>
-<summaryCNN vs AutoEncoder</summary>
+<summary>CNN vs AutoEncoder</summary>
+We compare two fundamentally different approaches for detecting out-of-distribution samples: confidence-based detection using CNNs and reconstruction-based detection using autoencoders.
 <div align="center">
 <img src="proj4/output_ood/scores_CNN_CLASSIC.png" alt="FGSM Attack" width="200"/>
 <img src="proj4/output_ood/ROC_curve_CNN_CLASSIC.png" alt="One-Pixel Attack" width="200"/>
@@ -124,8 +125,23 @@ These results reveal that neural networks are vulnerable to various types of car
 <img src="proj4/output_ood/ROC_curve_AUTOENCODER.png" alt="One-Pixel Attack" width="200"/>
 <p><em>Left: Cnn and Autoencoder scores | Right: Cnn and Autoencoder ROC curve </em></p>
 </div>  
-Reconstruction-based detection (autoencoders) significantly outperforms confidence-based detection (CNNs) for this OOD detection task, as autoencoders learn the underlying data distribution more explicitly through the reconstruction objective.
+The experimental results reveal a stark performance difference between the two approaches. CNN-based detection struggles with significant overlap in confidence scores between test and fake samples, indicating that classification confidence alone provides limited discriminative power for OOD detection. The moderate ROC performance confirms this challenge in distinguishing between in-distribution and out-of-distribution data.
+In contrast, autoencoder-based detection demonstrates superior performance through reconstruction error analysis. The clear separation between distributions shows that autoencoders capture the underlying data structure more effectively, with fake samples producing noticeably higher reconstruction errors.
 </details>
+<summary>CNN vs CNN trained with adversarial examples</summary>
+<div align="center">
+<img src="proj4/output_ood/scores_CNN_CLASSIC.png" alt="FGSM Attack" width="200"/>
+<img src="proj4/output_ood/ROC_curve_CNN_CLASSIC.png" alt="One-Pixel Attack" width="200"/>
+   <img src="proj4/output_ood/Confusion_matrix_CNN_CLASSIC.png.png" alt="One-Pixel Attack" width="200"/>
+</div>  
+<div align="center">
+<img src="proj4/output_ood/scores_CNN_ADVERSARIAL.png" alt="FGSM Attack" width="200"/>
+<img src="proj4/output_ood/ROC_curve_CNN_ADVERSARIAL.png" alt="One-Pixel Attack" width="200"/>
+  <img src="proj4/output_ood/Confusion_matrix_CNN_ADVERSARIAL.png.png" alt="One-Pixel Attack" width="200"/>
+<p><em>Left: Cnn and CNN with adverarial training scores | Center: Cnn and CNN with adverarial training ROC curve |Right: Cnn and CNN with adverarial confusion matrix | </em></p>
+Now we test our CNN with CNN trained with adversarial samples. The results show that adversarial training discriminates Out-of-Distribution (OOD) samples better, but it degrades the in-distribution classification performance.
+</div>  
+
 
 
 </details>
