@@ -74,16 +74,16 @@ Bad German → "Korrigiere:" + T5 → LoRA Fine-tuning → Corrected German
 
 ```
 Der Hund laufen schnell
-**corrected:** Der Hund läuft schnell
+corrected: Der Hund läuft schnell
 ```
 
 ```
 Morgen ich will gehen in Kino.
-**corrected:** Morgen werde ich in Kino gehen
+corrected: Morgen werde ich in Kino gehen
 ```
 ```
 Er spielt Fussball mit seine Freunde.
-**corrected:** Er spielt Fussball mit seinen Freunden
+corrected: Er spielt Fussball mit seinen Freunden
 ```
 </details>
 
