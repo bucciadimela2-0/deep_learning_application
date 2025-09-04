@@ -76,7 +76,6 @@ This lab explores three NLP approaches with different computational trade-offs: 
 <summary>Help me learn German! </summary>
 For the third exercise I decided to help myself to learn German. I'd always loved to do something to correct my awful German sentences.
 This project implements a T5-based grammar corrector specifically designed to assist with German language learning through automated sentence correction.
-This project implements a T5-based grammar corrector specifically designed to assist with German language learning through automated sentence correction.
   
 **Technical Solution:**
   
