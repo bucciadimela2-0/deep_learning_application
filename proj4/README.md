@@ -68,25 +68,25 @@ proj4/
 
 This project includes implementations of several adversarial attack methods for neural networks.
 
-### FGSM (Fast Gradient Sign Method)
+FGSM (Fast Gradient Sign Method)
 - Single-step attack using the gradient sign:  
   `x_adv = x + ε * sign(∇_x J(θ,x,y))`
-- Reference: *Explaining and Harnessing Adversarial Examples*  
+  > *Explaining and Harnessing Adversarial Examples*  
   Ian J. Goodfellow, Jonathon Shlens, Christian Szegedy, ICLR 2015
 
-# PGD (Projected Gradient Descent)
+ PGD (Projected Gradient Descent)
 - Multi-step FGSM with projection into an ε-ball for stronger attacks
- >*Reference: *Towards Deep Learning Models Resistant to Adversarial Attacks* 
+ > *Towards Deep Learning Models Resistant to Adversarial Attacks* 
  >Aleksander Madry, Aleksandar Makelov, Ludwig Schmidt, Dimitris Tsipras, Adrian Vladu, ICLR 2018
 
-# Few-Pixel Attack
+#Few-Pixel Attack
 - Sparse perturbations targeting only high-gradient pixels
->* Reference: *One Pixel Attack for Fooling Deep Neural Networks*  
+ >*One Pixel Attack for Fooling Deep Neural Networks*  
  > Jiawei Su, Danilo Vasconcellos Vargas, Kouichi Sakurai, IEEE TEC 2019
 
-### Genetic Algorithm Attack
+ Genetic Algorithm Attack
 - Evolutionary optimization of perturbations through selection and mutation
-  >**Reference: *Generating Natural Language Adversarial Examples** 
+ >*Reference: *Generating Natural Language Adversarial Examples*
  > Moustafa Alzantot, Yash Sharma, Ahmed Elgohary, Bo-Jhang Ho, Mani Srivastava, Kai-Wei Chang, EMNLP 2018
 
 </details>
