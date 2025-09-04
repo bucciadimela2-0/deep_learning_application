@@ -8,15 +8,16 @@ Prerequisites:
 ```
   pip install -r requirements.txt
 ```
-Let's tun gradcam :
+Let's run gradcam :
 
 ```
 python grad_cam_main.py --config config/gradcam.yaml
 ```
 
-> Please, always check if the configurtion file it's correct
+> Please, always check if the configuration file it's correct
   
 </details>
+
 ## :test_tube: Lab1 - Convolutional Neural Networks
 The first laboratory studies MLP degradation patterns and vanishing gradients across different activation functions and regularization techniques. It then compares standard CNNs against versions with skip connections, demonstrating how residual connections solve the degradation problem. Finally, Grad-CAM analysis is applied to the best model on both clean and adversarially perturbed images to reveal attention pattern changes under attack conditions.
 > **Experimental Results**: All experiments and training metrics are tracked and visualized at: [wandb](https://wandb.ai/martina-buccioni98-unifi/deep-learning-application?nw=nwusermartinabuccioni98)
