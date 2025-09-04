@@ -75,7 +75,7 @@ FGSM - Single-step attack that computes perturbations using the sign of the grad
 
 <div align="center">
 <img src="proj4/output_adv/fgsm/fgsm_attack.png" alt="FGSM Attack" width="200"/>
-<img src="proj4/output_adv/fgsm/fgsm_diff.png" alt="One-Pixel Attack" width="420"/>
+<img src="proj4/output_adv/fgsm/fgsm_diff.png" alt="One-Pixel Attack" width="250"/>
 <p><em>Left: FGSM distributed perturbations | Right: FGSM difference patterns</em></p>
 </div>
 
@@ -86,7 +86,7 @@ PGD - Multi-step iterative attack that applies FGSM repeatedly while projecting 
 > A. Madry et al., ICLR 2018, [arXiv:1706.06083](https://arxiv.org/abs/1706.06083)
 <div align="center">
 <img src="proj4/output_adv/pgd/pgd_attack.png" alt="FGSM Attack" width="200"/>
-<img src="proj4/output_adv/pgd/pgd_diff.png" alt="One-Pixel Attack" width="320"/>
+<img src="proj4/output_adv/pgd/pgd_diff.png" alt="One-Pixel Attack" width="250"/>
 <p><em>Left: PGD distributed perturbations | Right: PGD difference patterns</em></p>
 </div>
 
@@ -96,7 +96,7 @@ Few-Pixel attack - Sparse attack that targets only the most influential pixels b
 
 <div align="center">
 <img src="proj4/output_adv/one_pixel/one_pixel_attack.png" alt="FGSM Attack" width="200"/>
-<img src="proj4/output_adv/one_pixel/one_pixel_diff.png" alt="One-Pixel Attack" width="170"/>
+<img src="proj4/output_adv/one_pixel/one_pixel_diff.png" alt="One-Pixel Attack" width="250"/>
 <p><em>Left: Few_pixel distributed perturbations | Right: Few-pixwl difference patterns</em></p>
 </div>
 
@@ -105,7 +105,7 @@ Genetic attack - Evolutionary algorithm approach that optimizes adversarial pert
 > M.Alzantot et al., EMNLP 2018, [arXiv:1804.07998](https://arxiv.org/abs/1804.07998)
 <div align="center">
 <img src="proj4/output_adv/genetic/genetic_attack.png" alt="FGSM Attack" width="200"/>
-<img src="proj4/output_adv/genetic/genetic_diff.png" alt="One-Pixel Attack" width="170"/>
+<img src="proj4/output_adv/genetic/genetic_diff.png" alt="One-Pixel Attack" width="250"/>
 <p><em>Left: Genetic distributed perturbations | Right: Genetic difference patterns</em></p>
 </div>
 These results reveal that neural networks are vulnerable to various types of carefully crafted perturbations, from distributed noise to highly localized modifications.
