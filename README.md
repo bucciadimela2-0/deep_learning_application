@@ -96,7 +96,7 @@ Few-Pixel attack - Sparse attack that targets only the most influential pixels b
 
 <div align="center">
 <img src="proj4/output_adv/one_pixel/one_pixel_attack.png" alt="FGSM Attack" width="200"/>
-<img src="proj4/output_adv/one_pixel/one_pixel_diff.png" alt="One-Pixel Attack" width="150"/>
+<img src="proj4/output_adv/one_pixel/one_pixel_diff.png" alt="One-Pixel Attack" width="170"/>
 <p><em>Left: Few_pixel distributed perturbations | Right: Few-pixwl difference patterns</em></p>
 </div>
 
@@ -105,7 +105,7 @@ Genetic attack - Evolutionary algorithm approach that optimizes adversarial pert
 > M.Alzantot et al., EMNLP 2018, [arXiv:1804.07998](https://arxiv.org/abs/1804.07998)
 <div align="center">
 <img src="proj4/output_adv/genetic/genetic_attack.png" alt="FGSM Attack" width="200"/>
-<img src="proj4/output_adv/genetic/genetic_diff.png" alt="One-Pixel Attack" width="150"/>
+<img src="proj4/output_adv/genetic/genetic_diff.png" alt="One-Pixel Attack" width="170"/>
 <p><em>Left: Genetic distributed perturbations | Right: Genetic difference patterns</em></p>
 </div>
 These results reveal that neural networks are vulnerable to various types of carefully crafted perturbations, from distributed noise to highly localized modifications.
@@ -118,11 +118,11 @@ These results reveal that neural networks are vulnerable to various types of car
 We compare two fundamentally different approaches for detecting out-of-distribution samples: confidence-based detection using CNNs and reconstruction-based detection using autoencoders.
 <div align="center">
 <img src="proj4/output_ood/scores_CNN_CLASSIC.png" alt="FGSM Attack" width="200"/>
-<img src="proj4/output_ood/ROC_curve_CNN_CLASSIC.png" alt="One-Pixel Attack" width="150"/>
+<img src="proj4/output_ood/ROC_curve_CNN_CLASSIC.png" alt="One-Pixel Attack" width="200"/>
 </div>  
 <div align="center">
 <img src="proj4/output_ood/scores_AUTOENCODER.png" alt="FGSM Attack" width="200"/>
-<img src="proj4/output_ood/ROC_curve_AUTOENCODER.png" alt="One-Pixel Attack" width="150"/>
+<img src="proj4/output_ood/ROC_curve_AUTOENCODER.png" alt="One-Pixel Attack" width="200"/>
 <p><em>Left: Cnn and Autoencoder scores | Right: Cnn and Autoencoder ROC curve </em></p>
 </div>  
 The experimental results reveal a stark performance difference between the two approaches. CNN-based detection struggles with significant overlap in confidence scores between test and fake samples, indicating that classification confidence alone provides limited discriminative power for OOD detection. The moderate ROC performance confirms this challenge in distinguishing between in-distribution and out-of-distribution data.
