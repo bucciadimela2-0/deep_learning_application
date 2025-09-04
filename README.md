@@ -26,7 +26,7 @@ The right plot illustrates the impact of different regularization strategies. Th
 <summary>To skip or not to skip - CNN  </summary>
 <div align="center">
 <img src="plots/skipornottoskip_loss.png" width="250"/>
-<img src="plots/skipornottoskip.png"  width="250"/>
+<img src="plots/skipotnottoskip.png"  width="250"/>
 <p><em>Learning curves</em></p>
 </div>
 
@@ -35,9 +35,9 @@ The right plot illustrates the impact of different regularization strategies. Th
 | CNN | Small | [2,2] | 68% |
 | CNN | Medium | [5,5] | 77% | 
 | CNN | Large | [7,7] | 75% | 
-| CNN + skip | Small | [2,2] | ~63% | 
-| CNN + skip | Medium | [5,5] | ~79% | 
-| CNN + skip | Large | [7,7] | **~82%** | 
+| CNN + skip | Small | [2,2] | 63% | 
+| CNN + skip | Medium | [5,5] | 79% | 
+| CNN + skip | Large | [7,7] | **82%** | 
 
 These results confirm the fundamental insight from ResNet - that skip connections solve the degradation problem by allowing gradients to flow directly through identity mappings, enabling effective training of very deep networks.
 <details>
