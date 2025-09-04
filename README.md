@@ -91,6 +91,7 @@ PGD - Multi-step iterative attack that applies FGSM repeatedly while projecting 
 Few-Pixel attack - Sparse attack that targets only the most influential pixels based on gradient magnitude, minimizing the number of modified pixels. 
 > **One Pixel Attack for Fooling Deep Neural Networks**  
 > J. Su et al., IEEE TEC 2019, [arXiv:1710.08864](https://arxiv.org/abs/1710.08864)
+
 <div align="center">
 <img src="proj4/output_adv/one_pixel/one_pixel_attack.png" alt="FGSM Attack" width="300"/>
 <img src="proj4/output_adv/one_pixel/one_pixel_diff.png" alt="One-Pixel Attack" width="420"/>
