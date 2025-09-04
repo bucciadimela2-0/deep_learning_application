@@ -55,10 +55,30 @@ This phenomenon is clearly illustrated in other two cool examples, namely image 
 
 ## :test_tube: Lab3 - Transformers and NLP
 <details>
+<summary>Help me learn German! </summary>
+For the third exercise I decided to help myself to learn German. I'd always loved to do something to correct my awful German sentences.
+This project implements a T5-based grammar corrector specifically designed to assist with German language learning through automated sentence correction.
+This project implements a T5-based grammar corrector specifically designed to assist with German language learning through automated sentence correction.
+  
+**Technical Solution:**
+  
+```
+Bad German → "Korrigiere:" + T5 → LoRA Fine-tuning → Corrected German
+```
 
+**Model:** T5-small with LoRA adapters (r=4, α=8) for efficient fine-tuning
+**Dataset:** MERLIN German grammar correction dataset with authentic learner errors
+**Approach:** Parameter-Efficient Fine-Tuning (PEFT) with LoRA to adapt pre-trained knowledge
 
+**German Examples:**
 
+```
+Der Hund laufen schnell, corrected: "Der Hund läuft schnell
 
+Morgen ich will gehen in Kino. corrected: "Morgen werde ich in Kino gehen
+
+Er spielt Fussball mit seine Freunde.  corrected: Er spielt Fussball mit seinen Freunden
+```
 </details>
 
 
@@ -75,7 +95,7 @@ FGSM - Single-step attack that computes perturbations using the sign of the grad
 
 <div align="center">
 <img src="proj4/output_adv/fgsm/fgsm_attack.png" alt="FGSM Attack" width="200"/>
-<img src="proj4/output_adv/fgsm/fgsm_diff.png" alt="One-Pixel Attack" width="250"/>
+<img src="proj4/output_adv/fgsm/fgsm_diff.png" alt="One-Pixel Attack" width="270"/>
 <p><em>Left: FGSM distributed perturbations | Right: FGSM difference patterns</em></p>
 </div>
 
@@ -86,7 +106,7 @@ PGD - Multi-step iterative attack that applies FGSM repeatedly while projecting 
 > A. Madry et al., ICLR 2018, [arXiv:1706.06083](https://arxiv.org/abs/1706.06083)
 <div align="center">
 <img src="proj4/output_adv/pgd/pgd_attack.png" alt="FGSM Attack" width="200"/>
-<img src="proj4/output_adv/pgd/pgd_diff.png" alt="One-Pixel Attack" width="250"/>
+<img src="proj4/output_adv/pgd/pgd_diff.png" alt="One-Pixel Attack" width="270"/>
 <p><em>Left: PGD distributed perturbations | Right: PGD difference patterns</em></p>
 </div>
 
@@ -96,7 +116,7 @@ Few-Pixel attack - Sparse attack that targets only the most influential pixels b
 
 <div align="center">
 <img src="proj4/output_adv/one_pixel/one_pixel_attack.png" alt="FGSM Attack" width="200"/>
-<img src="proj4/output_adv/one_pixel/one_pixel_diff.png" alt="One-Pixel Attack" width="250"/>
+<img src="proj4/output_adv/one_pixel/one_pixel_diff.png" alt="One-Pixel Attack" width="270"/>
 <p><em>Left: Few_pixel distributed perturbations | Right: Few-pixwl difference patterns</em></p>
 </div>
 
@@ -105,7 +125,7 @@ Genetic attack - Evolutionary algorithm approach that optimizes adversarial pert
 > M.Alzantot et al., EMNLP 2018, [arXiv:1804.07998](https://arxiv.org/abs/1804.07998)
 <div align="center">
 <img src="proj4/output_adv/genetic/genetic_attack.png" alt="FGSM Attack" width="200"/>
-<img src="proj4/output_adv/genetic/genetic_diff.png" alt="One-Pixel Attack" width="250"/>
+<img src="proj4/output_adv/genetic/genetic_diff.png" alt="One-Pixel Attack" width="270"/>
 <p><em>Left: Genetic distributed perturbations | Right: Genetic difference patterns</em></p>
 </div>
 These results reveal that neural networks are vulnerable to various types of carefully crafted perturbations, from distributed noise to highly localized modifications.
@@ -140,7 +160,8 @@ In contrast, autoencoder-based detection demonstrates superior performance throu
 <img src="proj4/output_ood/ROC_curve_CNN_ADVERSARIAL.png" alt="One-Pixel Attack" width="200"/>
   <img src="proj4/output_ood/Confusion_matrix_CNN_ADVERSARIAL.png.png" alt="One-Pixel Attack" width="200"/>
 <p><em>Left: Cnn and CNN with adverarial training scores | Center: Cnn and CNN with adverarial training ROC curve |Right: Cnn and CNN with adverarial confusion matrix | </em></p>
-Now we test our CNN with CNN trained with adversarial samples. The results show that adversarial training discriminates Out-of-Distribution (OOD) samples better, but it degrades the in-distribution classification performance.
+
 </div>  
+Now we test our CNN with CNN trained with adversarial samples. The results show that adversarial training discriminates Out-of-Distribution (OOD) samples better, but it degrades the in-distribution classification performance.
 </details>
 
