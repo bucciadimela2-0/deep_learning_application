@@ -18,9 +18,37 @@ Among all the experiments conducted to study MLPs, two caught my attention. The 
 As shown in the left plot, the combination of saturating activation functions (sigmoid, tanh) and deep network architectures creates a multiplicative effect, causing gradients to diminish exponentially with each layer. This explains why early layers struggle to receive meaningful updates, resulting in slower or stalled training.
 
 The right plot illustrates the impact of different regularization strategies. These results highlight that data augmentation can act as a powerful form of regularization, often outperforming architectural modifications in improving validation performance.
-> ** Dataset Augmentation in Feature Space **
+> **Dataset Augmentation in Feature Space**
 > Terrance DeVries, Graham W. Taylor, ICLR 2017
 </details>
+
+<details>
+<summary>To skip or not to skip - CNN  </summary>
+<div align="center">
+<img src="plots/skipornottoskip_loss.png" width="250"/>
+<img src="plots/skipornottoskip.png"  width="250"/>
+<p><em>Learning curves</em></p>
+</div>
+
+| Architecture | Size | Depth | Final Accuracy | 
+|--------------|------|-------|----------------|
+| CNN | Small | [2,2] | 68% |
+| CNN | Medium | [5,5] | 77% | 
+| CNN | Large | [7,7] | 75% | 
+| CNN + skip | Small | [2,2] | ~63% | 
+| CNN + skip | Medium | [5,5] | ~79% | 
+| CNN + skip | Large | [7,7] | **~82%** | 
+
+These results confirm the fundamental insight from ResNet - that skip connections solve the degradation problem by allowing gradients to flow directly through identity mappings, enabling effective training of very deep networks.
+
+<summary>Gradcam: what does my best model sees? </summary>
+Grad-CAM (Gradient-weighted Class Activation Mapping) analysis was applied to the best-performing CNN to understand what regions the model focuses on for classification decisions. We want to show how the attention focuses over adversarial examples.
+
+<div align="center">
+<img src="proj1/gradcam_results/sample_4_gradcam.png" alt="Grad-CAM Airplane Analysis" width="400"/>
+<img src="" alt="proj1/gradcam_results_attack/sample_4_gradcam.png" width="400"/>
+</div>
+The analysis reveals how adversarial perturbations dramatically alter the model's attention patterns. In the original images, the model focuses on semantically relevant features; however, under adversarial attacks, attention either scatters to irrelevant regions or concentrates on attack-induced artifacts.
 
 
 ## :test_tube: Lab3 - Transformers and NLP
