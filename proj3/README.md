@@ -36,7 +36,7 @@ The exercises are designed to explore different NLP tasks and modeling strategie
 
 <details>
 <summary>📂 Project Structure</summary>
-
+  ```
 proj3/
 │── utils/                 # Utility scripts
 │   ├── data_utils.py      # Dataset loading and preprocessing
@@ -49,5 +49,6 @@ proj3/
 │── main_fine_tuning.py    # Fine-tuning DistilBERT on Rotten Tomatoes
 │── todo.txt               # Notes and pending tasks
 │── requirements.txt       # Project dependencies
+```
 
 </details>
