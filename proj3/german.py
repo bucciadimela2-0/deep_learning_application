@@ -73,7 +73,7 @@ class GermanCorrector:
             f.write(json.dumps(log_entry, ensure_ascii=False) + "\n")
 
     def load_dataset(self):
-        # Load MERLIN dataset without filters or limitations
+        # Load MERLIN dataset 
         raw = load_dataset("symeneses/merlin", "german", trust_remote_code=True)
 
         def to_pair(example):
@@ -104,7 +104,7 @@ class GermanCorrector:
         return dataset
 
     def setup_model(self):
-        # Configure model with LoRA on single GPU
+        # Configure model with LoRA
         
         # Load tokenizer
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
@@ -180,7 +180,7 @@ class GermanCorrector:
         )
 
     def train_model(self, dataset, output_dir="./t5-single-gpu"):
-        # Training on single GPU
+        # Training 
         tokenized_dataset = self.preprocess_data(dataset)
 
         # Training arguments optimized for single GPU
@@ -209,7 +209,7 @@ class GermanCorrector:
             report_to=None,  # Disable wandb
         )
 
-        # Trainer without data parallel
+        # Trainer 
         trainer = Seq2SeqTrainer(
             model=self.model,
             args=training_args,
@@ -251,7 +251,7 @@ class GermanCorrector:
             return False
 
     def setup_pipeline(self, model_path=None):
-        # Configure pipeline on single GPU
+        # Configure pipeline
         try:
             device_id = 0 if self.device.type == "cuda" else -1
 
@@ -316,7 +316,7 @@ def main():
     corrector = GermanCorrector()
 
     try:
-        # Load dataset (without filters)
+        # Load dataset 
         dataset = corrector.load_dataset()
 
         # Setup model
