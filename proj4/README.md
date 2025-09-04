@@ -71,22 +71,22 @@ This project includes implementations of several adversarial attack methods for 
 FGSM (Fast Gradient Sign Method)
 - Single-step attack using the gradient sign:  
   `x_adv = x + ε * sign(∇_x J(θ,x,y))`
-  > **[Explaining and Harnessing Adversarial Examples]** 
-  Ian J. Goodfellow, Jonathon Shlens, Christian Szegedy, ICLR 2015
+  > **[Explaining and Harnessing Adversarial Examples]**  
+  > I.J. Goodfellow et al., ICLR 2015, [arXiv:1412.6572](https://arxiv.org/abs/1412.6572)
 
- PGD (Projected Gradient Descent)
+PGD (Projected Gradient Descent)
 - Multi-step FGSM with projection into an ε-ball for stronger attacks
- > **[Towards Deep Learning Models Resistant to Adversarial Attacks]**
- >Aleksander Madry, Aleksandar Makelov, Ludwig Schmidt, Dimitris Tsipras, Adrian Vladu, ICLR 2018
+  > **[Towards Deep Learning Models Resistant to Adversarial Attacks]**  
+  > A. Madry et al., ICLR 2018, [arXiv:1706.06083](https://arxiv.org/abs/1706.06083)
 
 #Few-Pixel Attack
 - Sparse perturbations targeting only high-gradient pixels
- >**[One Pixel Attack for Fooling Deep Neural Networks]**  
- > Jiawei Su, Danilo Vasconcellos Vargas, Kouichi Sakurai, IEEE TEC 2019
+  > **[One Pixel Attack for Fooling Deep Neural Networks]**  
+  > J. Su et al., IEEE TEC 2019, [arXiv:1710.08864](https://arxiv.org/abs/1710.08864)
 
- Genetic Algorithm Attack
+Genetic Algorithm Attack
 - Evolutionary optimization of perturbations through selection and mutation
- >**[Reference: *Generating Natural Language Adversarial Examples]**
- > Moustafa Alzantot, Yash Sharma, Ahmed Elgohary, Bo-Jhang Ho, Mani Srivastava, Kai-Wei Chang, EMNLP 2018
+  > **[Generating Natural Language Adversarial Examples]**  
+  > M. Alzantot et al., EMNLP 2018, [arXiv:1804.07998](https://arxiv.org/abs/1804.07998)
 
 </details>
