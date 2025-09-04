@@ -98,7 +98,7 @@ Few-Pixel attack - Sparse attack that targets only the most influential pixels b
 </div>
 Genetic attack - Evolutionary algorithm approach that optimizes adversarial perturbations through selection, crossover, and mutation operations.
 > **Generating Natural Language Adversarial Examples**  
-> M. Alzantot et al., EMNLP 2018, [arXiv:1804.07998](https://arxiv.org/abs/1804.07998)
+> M.Alzantot et al., EMNLP 2018, [arXiv:1804.07998](https://arxiv.org/abs/1804.07998)
 <div align="center">
 <img src="proj4/output_adv/genetic/genetic_attack.png" alt="FGSM Attack" width="300"/>
 <img src="proj4/output_adv/genetic/genetic_diff.png" alt="One-Pixel Attack" width="420"/>
