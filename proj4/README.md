@@ -24,8 +24,7 @@ The project focuses on understanding model vulnerabilities and robustness throug
 
 </details>
 
-> **Note:** This project explores the intersection of adversarial machine learning and anomaly detection, providing tools for comprehensive model robustness evaluation.
-
+> **Note:** All experiments are explained in detail in the main README.md located in the root of the repository.
 <details>
 <summary>📂 Project Structure</summary>
 
