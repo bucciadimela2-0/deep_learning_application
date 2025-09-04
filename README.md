@@ -11,7 +11,7 @@ Prerequisites:
 Let's run gradcam :
 
 ```
-python grad_cam_main.py --config config/gradcam.yaml
+python proj1/grad_cam_main.py --config proj1/config/gradcam.yaml
 ```
 
 > Please, always check if the configuration file it's correct
