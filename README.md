@@ -50,7 +50,7 @@ Grad-CAM (Gradient-weighted Class Activation Mapping) analysis was applied to th
 <img src="proj1/gradcam_results_attack/sample_4_gradcam.png" width="250"/>
 </div>
 The analysis reveals how adversarial perturbations dramatically alter the model's attention patterns. In the original images, the model focuses on semantically relevant features; however, under adversarial attacks, attention either scatters to irrelevant regions or concentrates on attack-induced artifacts.
-
+This phenomenon is clearly illustrated in other two cool examples, namely image 1 and image 7.
 </details>
 
 ## :test_tube: Lab3 - Transformers and NLP
@@ -63,9 +63,36 @@ The analysis reveals how adversarial perturbations dramatically alter the model'
 
 
 ## :test_tube: Lab4 - Adversarial Learning and Out Of Distribution
-<details>
-<summary></summary>
+This laboratory explores model security and robustness through three sequential investigations. First, we implement various adversarial attack methods - FGSM (Fast Gradient Sign Method), PGD (Projected Gradient Descent), one-pixel attacks, and genetic algorithm-based perturbations.
+Second, we investigate out-of-distribution (OOD) detection capabilities by comparing two approaches: reconstruction-based detection using autoencoders versus confidence-based detection with CNNs. Finally, we enhance model robustness through adversarial training, incorporating adversarial examples generated from our attack methods into the training process. This demonstrates how exposure to adversarial samples during training can significantly improve model resilience against future attacks.
 
+<details>
+<summary>Let's hack it : adversarial attacks</summary>
+- FGSM : 
+<div align="center">
+<img src="proj4/output_adv/fgsm/fgsm_attack.png" alt="FGSM Attack" width="300"/>
+<img src="proj4/output_adv/fgsm/fgsm_diff.png" alt="One-Pixel Attack" width="300"/>
+<p><em>Left: FGSM distributed perturbations | Right: FGSM difference patterns</em></p>
+</div>
+
+- PGD : 
+<div align="center">
+<img src="proj4/output_adv/pgd/pgd_attack.png" alt="FGSM Attack" width="300"/>
+<img src="proj4/output_adv/pgd/pgd_diff.png" alt="One-Pixel Attack" width="300"/>
+<p><em>Left: PGD distributed perturbations | Right: PGD difference patterns</em></p>
+</div>
+- Few-Pixel attack  : 
+<div align="center">
+<img src="proj4/output_adv/one_pixel/one_pixel_attack.png" alt="FGSM Attack" width="300"/>
+<img src="proj4/output_adv/one_pixel/one_pixel_diff.png" alt="One-Pixel Attack" width="300"/>
+<p><em>Left: Few_pixel distributed perturbations | Right: Few-pixwl difference patterns</em></p>
+</div>
+- Genetic attack  : 
+<div align="center">
+<img src="proj4/output_adv/genetic/genetic_attack.png" alt="FGSM Attack" width="300"/>
+<img src="proj4/output_adv/genetic/genetic_diff.png" alt="One-Pixel Attack" width="300"/>
+<p><em>Left: Genetic distributed perturbations | Right: Genetic difference patterns</em></p>
+</div>
 
 
 </details>
