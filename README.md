@@ -25,8 +25,8 @@ The right plot illustrates the impact of different regularization strategies. Th
 <details>
 <summary>To skip or not to skip - CNN  </summary>
 <div align="center">
-<img src="plots/skipornottoskip_loss.png" width="250"/>
-<img src="plots/skipotnottoskip.png"  width="250"/>
+<img src="plots/skipornottoskip.png" width="250"/>
+<img src="plots/skipotnottoskip_loss.png"  width="250"/>
 <p><em>Learning curves</em></p>
 </div>
 
