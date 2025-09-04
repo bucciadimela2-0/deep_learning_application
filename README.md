@@ -4,7 +4,10 @@ Laboratory repository for the Deep Learning Applications course, featuring hands
 
 
 ## :test_tube: Lab1 - Convolutional Neural Networks
+The first laboratory studies MLP degradation patterns and vanishing gradients across different activation functions and regularization techniques. It then compares standard CNNs against versions with skip connections, demonstrating how residual connections solve the degradation problem. Finally, Grad-CAM analysis is applied to the best model on both clean and adversarially perturbed images to reveal attention pattern changes under attack conditions.
+
 <details>
+<summary>Let's break the ice with MLP </summary>
 
 
 </details>
