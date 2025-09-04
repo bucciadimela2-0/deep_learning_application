@@ -1,0 +1,38 @@
+
+# Training hyperparameters
+batch_size: 64
+lr: 0.001
+epochs: 50
+patience: 20
+delta: 0.001
+seed: 42
+device: "cuda"
+num_workers: 2
+resume: false
+save_model: false
+
+# Dataset configuration
+dataset:
+  name: "mnist"
+  augment: "none"
+
+# Model configuration
+model:
+  name: "mlp"
+  params:
+    layer_sizes: [256, 128]
+    activation: "relu"
+    dropout_rate: 0.5
+    batch_norm: true
+    name: "mlp_shallow2_mnist"
+
+# Weights & Biases configuration
+wandb:
+  enabled: true
+  project: "deep-learning-application"
+  entity: "martina-buccioni98-unifi"
+  run_name: "mlp_shallow2_mnist"
+  log_images_every: 500
+
+# Model saving
+save_dir: "proj1/models/saved/mlp_shallow_mnist"

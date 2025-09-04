@@ -1,0 +1,40 @@
+
+# Training hyperparameters
+batch_size: 32
+lr: 0.001
+epochs: 50
+patience: 10
+delta: 0.0001
+seed: 42
+device: "cuda"
+num_workers: 2
+resume: false
+save_model: false
+
+# Dataset configuration
+dataset:
+  name: "mnist"
+  augment: "none"
+
+# Model configuration
+model:
+  name: "mlp"
+  params:
+    #layer_sizes: [256, 128, 64, 32, 16]
+    #layer_sizes: [512, 256, 128, 64, 32, 16, 8, 4]
+    layer_sizes: [256, 256, 128, 128, 64, 64, 32, 32, 16, 16]
+    activation: "tanh"
+    dropout_rate: 0.0
+    batch_norm: false
+    name: "mlp_mnist_deep5"
+
+# Weights & Biases configuration
+wandb:
+  enabled: true
+  project: "deep-learning-application"
+  entity: "martina-buccioni98-unifi"
+  run_name: "mlp_mnist_deep10_tanh"
+  log_images_every: 100
+
+# Model saving
+save_dir: "models/saved/mlp_deep5_d08"

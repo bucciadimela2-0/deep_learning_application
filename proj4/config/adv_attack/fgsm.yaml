@@ -1,0 +1,34 @@
+# config.yaml - FGSM Attack
+dataset:
+  name: "cifar10"
+  batch_size: 64
+  sample_id: 15
+  augment: false
+
+model:
+  name: "cnn"
+  checkpoint_path: "models/cnn_deep_skip_cifar10.pt"  
+  params:
+    num_filters: 16         
+    num_blocks: 7                          
+    dropout_rate: 0.2     
+    use_batch_norm: false 
+    skip: true            
+    input_size: [32, 32] 
+    channels: 3           
+    name: "cnn_deep_skip2" 
+
+attack:
+  type: "fgsm"
+  epsilon: 0.031  # Size of single-step perturbation
+  budget: 0.031   # Same as epsilon for FGSM
+  targeted: true
+  targeted_class: 6
+
+output:
+  base_dir: "proj4/output_adv/fgsm"
+  save_diff: true
+
+device: 'cpu'
+num_workers: 2
+

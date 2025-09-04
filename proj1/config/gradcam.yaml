@@ -1,0 +1,57 @@
+
+
+# Training hyperparameters 
+batch_size: 1              
+lr: 0.001                 
+epochs: 1                   
+patience: 15              
+delta: 0.0001             
+seed: 42                  
+device: "cuda"            
+num_workers: 1            
+resume: false             
+save_model: false         
+
+# Dataset configuration
+dataset:
+  name: "cifar10"         
+  augment: "none"         
+
+# Model configuration - MUST match training config exactly
+model:
+  name: "cnn"            
+  params:
+    num_filters: 16         
+    num_blocks: 7                          
+    dropout_rate: 0.2     
+    use_batch_norm: false 
+    skip: true            
+    input_size: [32, 32] 
+    channels: 3           
+    name: "cnn_deep_skip2" 
+
+# Grad-CAM specific configuration
+checkpoint: "models/cnn_deep_skip_cifar10.pt"  
+
+# Analysis settings
+num_samples: 10          
+save_dir: "gradcam_results_attack"  
+alpha: 0.7                
+cmap: "plasma"            
+
+# FGSM attack settings (Optional)
+fgsm: true          
+target_class: 2       
+epsilon: 0.06           
+show_perturbation: false  
+
+# OOD detection settings
+ood: false                
+confidence_threshold: 0.7
+
+# W&B configuration 
+wandb:
+  enabled: false          # Disabled W&B for analysis
+  project: "grad-cam-analysis"
+  entity: "your-entity"
+  run_name: "gradcam_analysis"

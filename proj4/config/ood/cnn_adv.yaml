@@ -1,0 +1,40 @@
+device: "cuda"
+
+model:
+  name: "cnn"
+  params:
+    channels: 3
+    input_size: [32, 32]
+    num_classes: 10
+    dropout: 0.1
+
+optimizer:
+  type: "adam"
+  lr: 0.0001
+  weight_decay: 1e-4
+
+loss:
+  type: "crossentropy"
+
+data:
+  dataset: "cifar10"
+  batch_size: 32  # Batch size più piccolo per adversarial training
+  shuffle: true
+
+training:
+  epochs: 10
+  save_model: true
+  
+  adversarial:
+    enabled: true
+    epsilon: 0.0078
+    budget: 0.13
+
+evaluation:
+  enabled: true
+  model_type: "cnn"
+  plot_prefix: "CNN_ADVERSARIAL"
+
+paths:
+  output_dir: "proj4/output_ood"
+  saved_dir: "proj4/saved"

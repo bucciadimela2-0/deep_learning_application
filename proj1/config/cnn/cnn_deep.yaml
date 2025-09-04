@@ -1,0 +1,40 @@
+# Training hyperparameters
+batch_size: 64          
+lr: 0.001              
+epochs: 100           
+patience: 15           
+delta: 0.0001          
+seed: 42               
+device: "cuda"         
+num_workers: 2         
+resume: false          
+save_model: true       
+
+# Dataset configuration
+dataset:
+ name: "cifar10"      
+ augment: "simple"   
+
+# Model configuration
+model:
+ name: "cnn"          
+ params:
+   num_filters: 16   
+   num_blocks: 7      
+   dropout_rate: 0.2  
+   use_batch_norm: false  
+   skip: true         
+   input_size: [32, 32]   
+   channels: 3        
+   name: "cnn_deep_skip2"  
+
+# Weights & Biases configuration
+wandb:
+ enabled: false       # Enable W&B
+ project: "deep-learning-application"
+ entity: "martina-buccioni98-unifi"
+ run_name: "cnn_deep_deep_skip"
+ log_images_every: 10
+
+# Model saving
+save_dir: "proj1/models/saved/cnn"  # Save directory

@@ -1,0 +1,40 @@
+# config_cnn.yaml - Configurazione per CNN classico
+device: "cuda"
+
+model:
+  name: "cnn"
+  params:
+    channels: 3
+    input_size: [32, 32]
+    num_classes: 10
+
+optimizer:
+  type: "adam"
+  lr: 0.0001
+  weight_decay: 0.0
+
+loss:
+  type: "crossentropy"
+
+data:
+  dataset: "cifar10"
+  batch_size: 64
+  
+
+training:
+  epochs: 15
+  save_model: true
+  
+  adversarial:
+    enabled: false
+    epsilon: 0.03
+    budget: 100
+
+evaluation:
+  enabled: true
+  model_type: "cnn"
+  plot_prefix: "CNN_CLASSIC"
+
+paths:
+  output_dir: "proj4/output_ood/cnn"
+  saved_dir: "proj4/saved"

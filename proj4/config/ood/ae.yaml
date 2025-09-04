@@ -1,0 +1,38 @@
+# config_autoencoder.yaml - Configurazione per Autoencoder
+device: "cuda"
+
+model:
+  name: "autoencoder"
+  params:
+    channels: 3
+    input_size: [32, 32]
+    latent_dim: 128
+
+optimizer:
+  type: "adam"
+  lr: 0.0001
+  weight_decay: 0.0
+
+loss:
+  type: "mse"
+
+data:
+  dataset: "cifar10"
+  batch_size: 64
+  
+
+training:
+  epochs: 10
+  save_model: true
+  
+  adversarial:
+    enabled: false
+
+evaluation:
+  enabled: true
+  model_type: "autoencoder"
+  plot_prefix: "AUTOENCODER"
+
+paths:
+  output_dir: "proj4/output_ood"
+  saved_dir:  "proj4/saved"

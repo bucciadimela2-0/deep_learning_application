@@ -1,0 +1,31 @@
+# config.yaml
+dataset:
+  name: "cifar10"
+  batch_size: 64
+  sample_id: 10  
+  augment: false
+
+model:
+  name: "cnn"
+  checkpoint_path: "models/cnn_deep_skip_cifar10.pt"  
+  params:
+    num_filters: 16         
+    num_blocks: 7                          
+    dropout_rate: 0.2     
+    use_batch_norm: false 
+    skip: true            
+    input_size: [32, 32] 
+    channels: 3
+
+attack:
+  type: "one_pixel"  
+  epsilon: 0.031  
+  targeted: false 
+  num_pixel: 20  
+  targeted_class: 6  
+
+output:
+  base_dir: "proj4/output_adv/one_pixel" 
+  save_diff: true  
+device: 'cuda'
+num_workers: 2

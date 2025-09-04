@@ -1,0 +1,34 @@
+# config.yaml - Genetic Attack
+dataset:
+  name: "cifar10"
+  batch_size: 64
+  sample_id: 10
+  augment: false
+
+model:
+  name: "cnn"
+  checkpoint_path: "models/cnn_deep_skip_cifar10.pt"  
+  params:
+    num_filters: 16         
+    num_blocks: 7                          
+    dropout_rate: 0.2     
+    use_batch_norm: false 
+    skip: true            
+    input_size: [32, 32] 
+    channels: 3           
+    
+
+attack:
+  type: "genetic"
+  population_size: 10
+  generations: 50
+  mutation_rate: 0.1
+  targeted: false
+  targeted_class: 6
+
+output:
+  base_dir: "proj4/output_adv/genetic"
+  save_diff: true
+
+device: 'cpu'
+num_workers: 2
