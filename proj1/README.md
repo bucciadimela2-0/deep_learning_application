@@ -1,8 +1,9 @@
 A deep learning project implementing CNN and MLP models, with tools for Grad-CAM visualization, training management, and evaluation under degradation or adversarial conditions.
-#🎯 Objectives
+<details>
+<summary>🎯 Objectives<\summary>
 The exercises are designed to explore the behavior of different neural network architectures and techniques, focusing on training dynamics, regularization, and model interpretability.
 
-- **MLP (Multi-Layer Perceptron)**
+- *MLP (Multi-Layer Perceptron)**
   - Analyze the **vanishing gradient problem**
   - Compare **deep vs. medium vs. shallow** networks
   - Evaluate the effect of different **regularization strategies**:
@@ -10,19 +11,21 @@ The exercises are designed to explore the behavior of different neural network a
     - Batch Normalization
     - Data Augmentation
 
-- **CNN (Convolutional Neural Networks)**
+- *CNN (Convolutional Neural Networks)**
   - Test **data augmentation as regularization**
   - Show that **deeper does not always mean better**
   - Demonstrate improvements with **skip connections**
 
-- **Grad-CAM (Model Interpretability)**
+- *Grad-CAM (Model Interpretability)**
   - Generate **standard Grad-CAM visualizations**
   - Assess robustness under **FGSM adversarial attacks**
     - Notable examples on digits **4, 1, and 7**
-    - 
+<\details>
 > **Note:** All experiments are explained in detail in the main `README.md` located in the root of the repository.
+<details>
+<summary>📂 Project Structure<\summary>
+  
 ```
-📂 Project Structure
 proj1/
 │── config/               # Configuration files (YAML)
 │   ├── cnn/              # CNN-specific configs
@@ -50,6 +53,6 @@ proj1/
 │── grad_cam_main.py      # Main script for Grad-CAM experiments
 │── requirements.txt      # Project dependencies
 │── resume.txt            # Notes or previous experiment logs
-
 ```
 
+<\details>
