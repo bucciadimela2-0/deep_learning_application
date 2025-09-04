@@ -66,19 +66,22 @@ This project implements a T5-based grammar corrector specifically designed to as
 Bad German → "Korrigiere:" + T5 → LoRA Fine-tuning → Corrected German
 ```
 
-**Model:** T5-small with LoRA adapters (r=4, α=8) for efficient fine-tuning
-**Dataset:** MERLIN German grammar correction dataset with authentic learner errors
-**Approach:** Parameter-Efficient Fine-Tuning (PEFT) with LoRA to adapt pre-trained knowledge
+- **Model:** T5-small with LoRA adapters (r=4, α=8) for efficient fine-tuning
+- **Dataset:** MERLIN German grammar correction dataset with authentic learner errors
+- **Approach:** Parameter-Efficient Fine-Tuning (PEFT) with LoRA to adapt pre-trained knowledge
 
 **German Examples:**
 
-```
-Der Hund laufen schnell, corrected: "Der Hund läuft schnell
 
-Morgen ich will gehen in Kino. corrected: "Morgen werde ich in Kino gehen
+>>Der Hund laufen schnell
+>>**corrected:** Der Hund läuft schnell
 
-Er spielt Fussball mit seine Freunde.  corrected: Er spielt Fussball mit seinen Freunden
-```
+>>Morgen ich will gehen in Kino.
+>>**corrected:** Morgen werde ich in Kino gehen
+
+>>Er spielt Fussball mit seine Freunde.
+>> **corrected:** Er spielt Fussball mit seinen Freunden
+
 </details>
 
 
