@@ -10,19 +10,19 @@ A deep learning project implementing NLP experiments, including **feature extrac
 The exercises are designed to explore different NLP tasks and modeling strategies:
 
 - **Feature Extraction + Baseline Classifiers**
-  Script: main_fine_tuning.py
+  - Script: main_fine_tuning.py
   - Extract embeddings from pre-trained transformers
   - Train **SVM** and **Random Forest** classifiers on Rotten Tomatoes
   - Evaluate classification performance (accuracy, precision, recall, F1)
 
 - **Fine-tuning Transformer (DistilBERT)**
-  Script: main_fine_tuning.py
+  - Script: main_fine_tuning.py
   - Fine-tune **DistilBERT** for binary sentiment classification
   - Evaluate on validation and test sets
   - Save fine-tuned models for further use
 
 - **German Grammatical Error Correction (GEC)**
-   Script: german.py
+  - Script: german.py
   - Train **T5-small with LoRA adapters** on MERLIN dataset (German)
   - Implement correction pipeline for sentences
   - Log corrections with:
