@@ -1,8 +1,19 @@
 # deep_learning_application
 
 Laboratory repository for the Deep Learning Applications course, featuring hands-on experiments across Computer Vision, Natural Language Processing, and Adversarial Machine Learning domains.
-
-
+<details>
+<summary>How to run my project?  </summary>
+Prerequisites:
+```
+  pip install -r requirements.txt
+```
+Let's tun gradcam :
+```
+python grad_cam_main.py --config config/gradcam.yaml
+```
+>Please, always check if the configurtion file it's correct
+  
+</details>
 ## :test_tube: Lab1 - Convolutional Neural Networks
 The first laboratory studies MLP degradation patterns and vanishing gradients across different activation functions and regularization techniques. It then compares standard CNNs against versions with skip connections, demonstrating how residual connections solve the degradation problem. Finally, Grad-CAM analysis is applied to the best model on both clean and adversarially perturbed images to reveal attention pattern changes under attack conditions.
 > **Experimental Results**: All experiments and training metrics are tracked and visualized at: [wandb](https://wandb.ai/martina-buccioni98-unifi/deep-learning-application?nw=nwusermartinabuccioni98)
@@ -55,6 +66,8 @@ This phenomenon is clearly illustrated in other two cool examples, namely image 
 </details>
 
 ## :test_tube: Lab3 - Transformers and NLP
+This lab explores three NLP approaches with different computational trade-offs: a German grammar corrector using LoRA fine-tuning for personal language learning, feature extraction with classical ML for baseline performance, and full transformer fine-tuning for sentiment analysis.
+
 <details>
 <summary>Help me learn German! </summary>
 For the third exercise I decided to help myself to learn German. I'd always loved to do something to correct my awful German sentences.
