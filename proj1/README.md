@@ -21,7 +21,10 @@ The exercises are designed to explore the behavior of different neural network a
   - Assess robustness under **FGSM adversarial attacks**
     - Notable examples on digits **4, 1, and 7**
 </details>
+
 > **Note:** All experiments are explained in detail in the main `README.md` located in the root of the repository.
+
+
 <details>
 <summary>📂 Project Structure</summary>
   
