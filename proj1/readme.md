@@ -1,5 +1,5 @@
 A deep learning project implementing CNN and MLP models, with tools for Grad-CAM visualization, training management, and evaluation under degradation or adversarial conditions.
-
+'''
 📂 Project Structure
 proj1/
 │── config/               # Configuration files (YAML)
@@ -29,4 +29,4 @@ proj1/
 │── requirements.txt      # Project dependencies
 │── resume.txt            # Notes or previous experiment logs
 
-
+'''
