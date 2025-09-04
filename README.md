@@ -4,14 +4,17 @@ Laboratory repository for the Deep Learning Applications course, featuring hands
 <details>
 <summary>How to run my project?  </summary>
 Prerequisites:
+  
 ```
   pip install -r requirements.txt
 ```
 Let's tun gradcam :
+
 ```
 python grad_cam_main.py --config config/gradcam.yaml
 ```
->Please, always check if the configurtion file it's correct
+
+> Please, always check if the configurtion file it's correct
   
 </details>
 ## :test_tube: Lab1 - Convolutional Neural Networks
